@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.jetpackcompose.ui.home.HomeScreen
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,39 +22,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeTheme {
-
-                Column(
-                    modifier = Modifier.fillMaxSize(),
-                    Arrangement.Center,
-                    Alignment.CenterHorizontally
-                ) {
-                    Greeting("Android")
-                    Greeting("Android")
-                    Greeting("Android")
-                }
+                HomeScreen()
             }
-        }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun DefaultPreview() {
-
-    JetpackComposeTheme {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            Arrangement.Center,
-            Alignment.CenterHorizontally,
-        ) {
-            Greeting("Android")
-            Greeting("Android")
-            Greeting("Android")
         }
     }
 }
